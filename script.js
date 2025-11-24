@@ -10,6 +10,10 @@ function calcularDesconto() {
     var precoComDesconto = precoOriginal - (precoOriginal * (percentualDesconto / 100));
 
     document.getElementById('precoComDesconto').innerText = precoComDesconto.toFixed(2);
+
+    // ✅ limpar inputs
+    document.getElementById('precoOriginal').value = "";
+    document.getElementById('percentualDesconto').value = "";
 }
 
 function calcularJuros() {
@@ -26,6 +30,11 @@ function calcularJuros() {
     var jurosSimples = (capital * taxaJuros * periodo) / 100;
     var montanteComJuros = capital + jurosSimples;
     document.getElementById('montanteComJuros').innerText = montanteComJuros.toFixed(2);
+
+    // ✅ limpar inputs
+    document.getElementById('capital').value = "";
+    document.getElementById('taxaJuros').value = "";
+    document.getElementById('periodo').value = "";
 }
 
 function calcularOperacao() {
@@ -68,4 +77,8 @@ function calcularOperacao() {
     }
 
     document.getElementById('resultado').innerText = resultado.toFixed(2);
+
+    // ✅ limpar inputs
+    document.getElementById('numero1').value = "";
+    document.getElementById('numero2').value = "";
 }
